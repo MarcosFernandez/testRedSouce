@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { Player } from "./Player";
-import { chanceOfSuccess } from './Player';
 
 test('user cannot enter a value lower than 2', ()=> {
     
@@ -23,6 +22,3 @@ test('user cannot enter a value lower than 2', ()=> {
 });
 
 
-test("if power equals 4 and skill 4 the chance of two succesess is 50%", () => {
-    expect(chanceOfSuccess(2,4,2)).toBe(0.25);
-});

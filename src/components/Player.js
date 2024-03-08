@@ -1,27 +1,6 @@
 import React from "react";
 
 
-const getSuccesRate = (skill) => {
-    return (7 - skill) / 6;
-}
-
-export const chanceOfSuccess = (power,skill,succesNumber) => {
-    
-    if(succesNumber < 0) return 0;
-    if (power === 0) {
-        if (succesNumber === 0) return 1;
-        return 0;
-    } 
-    if (power < succesNumber) return 0;
-
-
-    const successRate = getSuccesRate(skill); 
-    return successRate * chanceOfSuccess(power-1, skill, succesNumber -1) +
-           (1 - successRate) * chanceOfSuccess(power-1, skill, succesNumber); 
-}
-
-
-
 export const Player = ({playerNumber,player,setPlayer}) => {
 
     const handlerStatChange = (currentStats, newStat, updatePlayer) => {

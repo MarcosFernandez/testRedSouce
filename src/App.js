@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 
 import { Player } from './components/Player';
+import { ResultTable } from './components/ResultTable';
 
 const defaultPlayer = {
   power: 1,
@@ -40,6 +41,7 @@ function App() {
           setPlayer={setPlayer2}
       />
 
+      <ResultTable player1={player1} player2={player2}/>
     </div>
   );
 }
